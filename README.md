@@ -2,9 +2,48 @@
 
 A comprehensive double-entry bookkeeping application built with Flutter for managing financial accounts, recording transactions, and generating financial statements.
 
-##
+## Table of Contents
 
-### Development Setup:
+- [Installation Instructions](#installation-instructions)
+  - [Windows Installation Options](#windows-installation-options)
+  - [Uninstallation](#uninstallation)
+- [Development Setup](#development-setup)
+- [Building for Production](#building-for-production)
+- [System Requirements](#system-requirements)
+- [Key Features](#key-features)
+- [How to Use](#how-to-use)
+- [Data Model Documentation](#data-model-documentation)
+- [Database Relationships](#database-relationships)
+- [Application Flow](#application-flow)
+
+## Installation Instructions
+
+### Windows Installation Options
+
+#### MSIX Package Installation (Recommended)
+
+1. Run the `open_msix_package.bat` file to locate the MSIX installer
+2. Or navigate directly to the MSIX package file (`FinancialAccounting.msix`) in the `setup_app\WindowsStore` folder
+3. Double-click the MSIX file to install using Windows App Installer
+4. If prompted, click "Install" to confirm
+5. After installation, the app will appear in your Start menu as "Financial Accounting System"
+
+> **Note:** If you don't see the MSIX file, you may need to build it first by running:
+>
+> ```powershell
+> flutter pub run msix:create --output-path=setup_app\WindowsStore
+> ```
+>
+> For detailed instructions on accessing the MSIX file, see [MSIX_ACCESS_GUIDE.md](MSIX_ACCESS_GUIDE.md)
+
+### Uninstallation
+
+1. Open Windows Settings
+2. Go to Apps > Installed apps
+3. Find "Financial Accounting System" in the list
+4. Click the three dots and select "Uninstall"
+
+## Development Setup:
 
 1. Make sure you have Flutter installed (https://flutter.dev/docs/get-started/install)
 2. Ensure you have Windows development dependencies installed:
@@ -31,6 +70,17 @@ flutter build windows --release
 # Create ZIP package for alternative distribution
 ./create_release.ps1
 ```
+
+## System Requirements
+
+- **Operating System:** Windows 10 version 10.0.17763.0 or higher
+- **Processor:** 1.5 GHz or faster processor
+- **Memory:** 4 GB RAM minimum
+- **Storage:** 100 MB available storage space
+- **Display:** 1280 x 720 or higher resolution
+- **Additional Requirements:**
+  - Microsoft Visual C++ Redistributable 2015-2019 (included in installer)
+  - Windows App Installer for MSIX installation
 
 ## Key Features
 
