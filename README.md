@@ -2,21 +2,7 @@
 
 A comprehensive double-entry bookkeeping application built with Flutter for managing financial accounts, recording transactions, and generating financial statements.
 
-## Installation and Setup
-
-### Windows Installation:
-
-#### Option 1: Installer
-
-1. Download the latest release from the GitHub Releases page
-2. Run the `install_windows.bat` file with administrator privileges
-3. A desktop shortcut will be created automatically
-
-#### Option 2: Manual Installation
-
-1. Download the latest release from the GitHub Releases page
-2. Extract the ZIP file to your preferred location
-3. Run `financel_acc.exe` to start the application
+##
 
 ### Development Setup:
 
@@ -33,11 +19,17 @@ A comprehensive double-entry bookkeeping application built with Flutter for mana
 ### Building for Production:
 
 ```powershell
-# Build for Windows
+# Build Flutter app for Windows
 flutter build windows --release
 
 # The built application will be available at:
 # build/windows/x64/runner/Release/
+
+# Create Windows installer
+./build_installer.ps1
+
+# Create ZIP package for alternative distribution
+./create_release.ps1
 ```
 
 ## Key Features
