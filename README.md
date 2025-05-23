@@ -2,11 +2,13 @@
 
 A comprehensive double-entry bookkeeping application built with Flutter for managing financial accounts, recording transactions, and generating financial statements.
 
-
 ## Arabic Documentation
 
 A complete Arabic translation of this documentation is available in [README_AR.md](README_AR.md).
 
+## How to Prompt to Vibe Code
+
+If you are a trainer and want to try to create the app, you can use the prompt in this file [promt_to_vibeCode.md](promt_to_vibeCode.md)
 
 ## Table of Contents
 
@@ -22,7 +24,7 @@ A complete Arabic translation of this documentation is available in [README_AR.m
 - [Database Relationships](#database-relationships)
 - [Application Flow](#application-flow)
 - [Project Structure](#project-structure)
-- [Arabic Documentation](#arabic-documentation)
+- [Accounting Structure](#accounting-structure)
 
 ## Installation Instructions
 
@@ -308,4 +310,26 @@ This architecture follows the BLoC pattern (Business Logic Component), which sep
 2. **Business Logic Layer**: BLoCs that handle state management and business rules
 3. **Data Layer**: Repositories and models that handle data access and storage
 
+## Accounting Structure
 
+This application implements a comprehensive accounting system with the following structure:
+
+- **Chart of Accounts**: Hierarchical organization of accounts including:
+
+  - Assets
+  - Liabilities
+  - Owner's Equity
+  - Expenses
+  - Revenues
+
+- **Journal Entries**: The application uses the American journal format for recording transactions.
+
+- **Ledger Accounts**: All journal entries are posted to the appropriate ledger accounts to maintain running balances.
+
+- **Trial Balance**: End balances are posted to the trial balance for verification.
+
+- **Financial Statements**: The system automatically generates:
+  - Balance Sheet (showing financial position)
+  - Income Statement (showing financial performance)
+
+The application is built using Flutter with SQLite database support (via sqflite_common_ffi package) for Windows and implements the BLoC pattern for state management.
