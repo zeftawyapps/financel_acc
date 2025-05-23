@@ -8,7 +8,7 @@ A complete Arabic translation of this documentation is available in [README_AR.m
 
 ## How to Prompt to Vibe Code
 
-If you are a trainer and want to try to create the app, you can use the prompt in this file [promt_to_vibeCode.md](promt_to_vibeCode.md)
+If you are a trainer and want to try to create the app, you can use the prompt in this file [promt_to_vibeCode](promt_to_vibeCode.md)
 
 ## Table of Contents
 
