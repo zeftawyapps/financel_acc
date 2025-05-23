@@ -2,6 +2,7 @@
 ## Arabic Documentation
 
 A complete Arabic translation of this documentation is available in [README_AR.md](README_AR.md).
+
 A comprehensive double-entry bookkeeping application built with Flutter for managing financial accounts, recording transactions, and generating financial statements.
 
 ## Table of Contents
