@@ -15,6 +15,8 @@ A comprehensive double-entry bookkeeping application built with Flutter for mana
 - [Data Model Documentation](#data-model-documentation)
 - [Database Relationships](#database-relationships)
 - [Application Flow](#application-flow)
+- [Project Structure](#project-structure)
+- [Arabic Documentation](#arabic-documentation)
 
 ## Installation Instructions
 
@@ -235,3 +237,71 @@ The ledger records all posted transactions with running balances for each accoun
 4. **Financial Statements**: Balance sheets and income statements are generated from ledger data
 
 This financial accounting system implements double-entry bookkeeping principles, ensuring that for every transaction, debits always equal credits.
+
+## Project Structure
+
+The Financial Accounting System follows a well-organized project structure for maintainability and scalability:
+
+### Directory Structure
+
+```
+financel_acc/
+├── lib/                      # Main application code
+│   ├── main.dart            # Application entry point
+│   └── lib/                 # Core library code
+│       ├── Fa-package/      # Financial accounting package
+│       │   ├── bloc/        # Business Logic Components
+│       │   │   ├── account/     # Account-related business logic
+│       │   │   ├── journal/     # Journal-related business logic
+│       │   │   └── ledger/      # Ledger-related business logic
+│       │   ├── data/        # Data layer
+│       │   │   ├── database/    # Database services
+│       │   │   ├── models/      # Data models
+│       │   │   └── repositories/# Repositories for data access
+│       └── ui/              # User interface components
+│           ├── screens/         # Application screens
+│           │   ├── accounts/    # Account management screens
+│           │   ├── financial/   # Financial statements screens
+│           │   ├── journal/     # Journal entry screens
+│           │   └── ledger/      # General ledger screens
+│           ├── theme/           # Theme configuration
+│           └── widgets/         # Reusable UI widgets
+├── windows/                # Windows platform-specific code
+├── setup_app/             # Installation packages
+│   ├── Installer/         # Windows installer files
+│   ├── Portable/          # Portable application package
+│   ├── SharedAssets/      # Shared documentation and assets
+│   └── WindowsStore/      # Windows Store (MSIX) package
+└── test/                  # Application tests
+```
+
+### Architecture Diagram
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                        Presentation Layer                    │
+│  ┌──────────────┐  ┌─────────────┐  ┌──────────────────────┐ │
+│  │ Home Screen  │  │ UI Widgets  │  │ Theme Configuration  │ │
+│  └──────────────┘  └─────────────┘  └──────────────────────┘ │
+├─────────────────────────────────────────────────────────────┤
+│                        Business Logic Layer                  │
+│  ┌──────────────┐  ┌─────────────┐  ┌──────────────────────┐ │
+│  │ Account Bloc │  │ Journal Bloc│  │ Ledger Bloc          │ │
+│  └──────────────┘  └─────────────┘  └──────────────────────┘ │
+├─────────────────────────────────────────────────────────────┤
+│                        Data Layer                            │
+│  ┌──────────────┐  ┌─────────────┐  ┌──────────────────────┐ │
+│  │ Repositories │  │ Data Models │  │ Database Service     │ │
+│  └──────────────┘  └─────────────┘  └──────────────────────┘ │
+└─────────────────────────────────────────────────────────────┘
+```
+
+This architecture follows the BLoC pattern (Business Logic Component), which separates the application into three main layers:
+
+1. **Presentation Layer**: UI components that display data and capture user input
+2. **Business Logic Layer**: BLoCs that handle state management and business rules
+3. **Data Layer**: Repositories and models that handle data access and storage
+
+## Arabic Documentation
+
+A complete Arabic translation of this documentation is available in [README_AR.md](README_AR.md).
