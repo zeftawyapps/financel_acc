@@ -309,24 +309,24 @@ The Financial Accounting System follows a well-organized project structure for m
 financel_acc/
 ├── lib/                      # Main application code
 │   ├── main.dart            # Application entry point
-│   └── lib/                 # Core library code
-│       ├── Fa-package/      # Financial accounting package
-│       │   ├── bloc/        # Business Logic Components
-│       │   │   ├── account/     # Account-related business logic
-│       │   │   ├── journal/     # Journal-related business logic
-│       │   │   └── ledger/      # Ledger-related business logic
-│       │   ├── data/        # Data layer
-│       │   │   ├── database/    # Database services
-│       │   │   ├── models/      # Data models
-│       │   │   └── repositories/# Repositories for data access
-│       └── ui/              # User interface components
-│           ├── screens/         # Application screens
-│           │   ├── accounts/    # Account management screens
-│           │   ├── financial/   # Financial statements screens
-│           │   ├── journal/     # Journal entry screens
-│           │   └── ledger/      # General ledger screens
-│           ├── theme/           # Theme configuration
-│           └── widgets/         # Reusable UI widgets
+│   ├── Fa-package/          # Financial accounting package
+│   │   ├── bloc/            # Business Logic Components
+│   │   │   ├── account/     # Account-related business logic
+│   │   │   ├── journal/     # Journal-related business logic
+│   │   │   └── ledger/      # Ledger-related business logic
+│   │   └── data/            # Data layer
+│   │       ├── database/    # Database services
+│   │       ├── models/      # Data models
+│   │       └── repositories/# Repositories for data access
+│   ├── ui/                  # User interface components
+│   │   ├── screens/         # Application screens
+│   │   │   ├── accounts/    # Account management screens
+│   │   │   ├── financial/   # Financial statements screens
+│   │   │   ├── journal/     # Journal entry screens
+│   │   │   └── ledger/      # General ledger screens
+│   │   ├── theme/           # Theme configuration
+│   │   └── widgets/         # Reusable UI widgets
+│   └── utils/               # Utility functions and helpers
 ├── windows/                # Windows platform-specific code
 ├── setup_app/             # Installation packages
 │   ├── Installer/         # Windows installer files
