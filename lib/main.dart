@@ -1,17 +1,17 @@
-import 'package:financel_acc/lib/Fa-package/bloc/account/account_bloc.dart';
-import 'package:financel_acc/lib/Fa-package/bloc/journal/journal_bloc.dart';
-import 'package:financel_acc/lib/Fa-package/bloc/ledger/ledger_bloc.dart';
-import 'package:financel_acc/lib/Fa-package/data/database/database_service.dart';
-import 'package:financel_acc/lib/Fa-package/data/repositories/account_repository.dart';
-import 'package:financel_acc/lib/Fa-package/data/repositories/journal_repository.dart';
-import 'package:financel_acc/lib/Fa-package/data/repositories/ledger_repository.dart';
-import 'package:financel_acc/lib/ui/theme/app_theme.dart';
+import 'package:financel_acc/Fa-package/bloc/account/account_bloc.dart';
+import 'package:financel_acc/Fa-package/bloc/journal/journal_bloc.dart';
+import 'package:financel_acc/Fa-package/bloc/ledger/ledger_bloc.dart';
+import 'package:financel_acc/Fa-package/data/database/database_service.dart';
+import 'package:financel_acc/Fa-package/data/repositories/account_repository.dart';
+import 'package:financel_acc/Fa-package/data/repositories/journal_repository.dart';
+import 'package:financel_acc/Fa-package/data/repositories/ledger_repository.dart';
+import 'package:financel_acc/ui/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
 // Import screens
-import 'lib/ui/screens/home_screen.dart';
+import 'package:financel_acc/ui/screens/home_screen.dart';
 
 void main() {
   // Initialize FFI for Windows

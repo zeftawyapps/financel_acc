@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:financel_acc/lib/Fa-package/data/models/ledger.dart';
+import 'package:financel_acc/Fa-package/data/models/ledger.dart';
 import '../../data/models/financial_statement.dart';
 
 abstract class LedgerState extends Equatable {

@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:financel_acc/lib/Fa-package/data/models/journal.dart';
+import 'package:financel_acc/Fa-package/data/models/journal.dart';
 
 abstract class JournalState extends Equatable {
   const JournalState();

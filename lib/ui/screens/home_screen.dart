@@ -1,10 +1,10 @@
-import 'package:financel_acc/lib/Fa-package/bloc/account/account_bloc.dart';
-import 'package:financel_acc/lib/Fa-package/bloc/account/account_event.dart';
-import 'package:financel_acc/lib/ui/screens/accounts/accounts_screen.dart';
-import 'package:financel_acc/lib/ui/screens/financial/financial_statements_screen.dart';
-import 'package:financel_acc/lib/ui/screens/journal/journal_entries_screen.dart';
-import 'package:financel_acc/lib/ui/screens/ledger/general_ledger_screen.dart';
-import 'package:financel_acc/lib/ui/theme/app_theme.dart';
+import 'package:financel_acc/Fa-package/bloc/account/account_bloc.dart';
+import 'package:financel_acc/Fa-package/bloc/account/account_event.dart';
+import 'package:financel_acc/ui/screens/accounts/accounts_screen.dart';
+import 'package:financel_acc/ui/screens/financial/financial_statements_screen.dart';
+import 'package:financel_acc/ui/screens/journal/journal_entries_screen.dart';
+import 'package:financel_acc/ui/screens/ledger/general_ledger_screen.dart';
+import 'package:financel_acc/ui/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
