@@ -1,5 +1,7 @@
 # Financial Accounting System
+## Arabic Documentation
 
+A complete Arabic translation of this documentation is available in [README_AR.md](README_AR.md).
 A comprehensive double-entry bookkeeping application built with Flutter for managing financial accounts, recording transactions, and generating financial statements.
 
 ## Table of Contents
@@ -302,6 +304,4 @@ This architecture follows the BLoC pattern (Business Logic Component), which sep
 2. **Business Logic Layer**: BLoCs that handle state management and business rules
 3. **Data Layer**: Repositories and models that handle data access and storage
 
-## Arabic Documentation
 
-A complete Arabic translation of this documentation is available in [README_AR.md](README_AR.md).
