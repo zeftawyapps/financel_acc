@@ -1,8 +1,78 @@
-# Financial Accounting System - Data Model Documentation
+# Financial Accounting System
 
-This document outlines the core data models used in the Financial Accounting application, which can be used for presentations and documentation.
+A comprehensive double-entry bookkeeping application built with Flutter for managing financial accounts, recording transactions, and generating financial statements.
 
-## Core Data Models
+## Installation and Setup
+
+### Windows Installation:
+
+#### Option 1: Installer
+1. Download the latest release from the GitHub Releases page
+2. Run the `install_windows.bat` file with administrator privileges
+3. A desktop shortcut will be created automatically
+
+#### Option 2: Manual Installation
+1. Download the latest release from the GitHub Releases page
+2. Extract the ZIP file to your preferred location
+3. Run `financel_acc.exe` to start the application
+
+### Development Setup:
+
+1. Make sure you have Flutter installed (https://flutter.dev/docs/get-started/install)
+2. Ensure you have Windows development dependencies installed:
+   ```
+   flutter config --enable-windows-desktop
+   ```
+3. Clone this repository: `git clone https://github.com/zeftawyapps/financel_acc.git`
+4. Navigate to the project folder: `cd financel_acc`
+5. Get dependencies: `flutter pub get`
+6. Run the app: `flutter run -d windows`
+
+### Building for Production:
+
+```powershell
+# Build for Windows
+flutter build windows --release
+
+# The built application will be available at:
+# build/windows/x64/runner/Release/
+```
+
+## Key Features
+
+- **Chart of Accounts:** Create and manage account hierarchies for assets, liabilities, equity, income, and expenses
+- **Journal Entries:** Record debit and credit transactions with automatic balancing
+- **General Ledger:** View detailed account history with running balances
+- **Financial Statements:** Generate balance sheets and income statements
+- **Modern UI:** Clean, responsive interface with a professional design
+
+## How to Use
+
+### Setting Up Accounts:
+1. Navigate to the "Chart of Accounts" screen from the main menu
+2. Click "Add Account" to create new accounts
+3. Specify account details: number, name, type, and parent account (if applicable)
+4. Organize accounts in a hierarchical structure for better financial categorization
+
+### Recording Transactions:
+1. Go to "Journal Entries" from the main menu
+2. Click "New Journal Entry"
+3. Enter the transaction date, reference number, and description
+4. Add debit and credit entries ensuring they balance (equal amounts on both sides)
+5. Save the journal entry to record the transaction
+
+### Viewing the General Ledger:
+1. Access "General Ledger" from the main menu
+2. Select an account from the dropdown
+3. View all transactions affecting the selected account with running balances
+
+### Generating Financial Statements:
+1. Navigate to "Financial Statements" from the main menu
+2. Use the date picker to select the reporting date
+3. Switch between Balance Sheet and Income Statement views
+4. Review financial position or performance information
+
+## Data Model Documentation
 
 ### 1. Account Model
 
