@@ -132,6 +132,59 @@ flutter build windows --release
 
 ## Data Model Documentation
 
+### Entity Relationship Diagram
+
+```
+┌───────────────────┐       ┌─────────────────────┐      ┌───────────────────┐
+│    AccountType    │       │      Account        │      │    JournalEntry   │
+├───────────────────┤       ├─────────────────────┤      ├───────────────────┤
+│ id (PK)           │       │ id (PK)             │      │ id (PK)           │
+│ name              │◄──────┤ typeId (FK)         │◄─────┤ accountId (FK)    │
+│ code              │       │ accountNumber        │      │ journalId (FK)────┼──────┐
+└───────────────────┘       │ name                │      │ description       │      │
+                            │ parentId (FK)───┐   │      │ debit             │      │
+                            │ level           │   │      │ credit            │      │
+                            │ isActive        │   │      └───────────────────┘      │
+                            └─────────────────┼───┘                                 │
+                                              │                                     │
+                                              └─────────────┐                       │
+                                                            ▼                       │
+                            ┌────────────────────┐     ┌────────────────────┐       │
+                            │       Ledger       │     │      Journal       │       │
+                            ├────────────────────┤     ├────────────────────┤       │
+                            │ id (PK)            │     │ id (PK)            │◄──────┘
+                            │ accountId (FK)─────┼─────┤ referenceNumber    │
+                            │ journalId (FK)─────┼─────┤ date               │
+                            │ entryId (FK)───────┼─────┤ description        │
+                            │ date               │     │ isPosted           │
+                            │ debit              │     └────────────────────┘
+                            │ credit             │
+                            │ balance            │
+                            └────────────────────┘
+```
+
+### Financial Statements Data Flow
+
+```
+                   ┌───────────────────────────────────────────┐
+                   │               Ledger Records              │
+                   └─────────────────┬─────────────────────────┘
+                                     │
+                         ┌───────────▼────────────┐
+                         │     Trial Balance      │
+                         └───────────┬────────────┘
+                                     │
+                   ┌─────────────────┴─────────────────┐
+                   ▼                                   ▼
+        ┌────────────────────┐             ┌────────────────────┐
+        │    Balance Sheet   │             │  Income Statement  │
+        ├────────────────────┤             ├────────────────────┤
+        │ - Assets           │             │ - Revenues         │
+        │ - Liabilities      │             │ - Expenses         │
+        │ - Owner's Equity   │             │ - Net Income       │
+        └────────────────────┘             └────────────────────┘
+```
+
 ### 1. Account Model
 
 The accounting system is built around a flexible Chart of Accounts structure:
