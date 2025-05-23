@@ -142,13 +142,13 @@ flutter build windows --release
 │ name              │◄──────┤ typeId (FK)         │◄─────┤ accountId (FK)    │
 │ code              │       │ accountNumber        │      │ journalId (FK)────┼──────┐
 └───────────────────┘       │ name                │      │ description       │      │
-                            │ parentId (FK)───┐   │      │ debit             │      │
-                            │ level           │   │      │ credit            │      │
-                            │ isActive        │   │      └───────────────────┘      │
-                            └─────────────────┼───┘                                 │
-                                              │                                     │
-                                              └─────────────┐                       │
-                                                            ▼                       │
+                            │ parentId (FK)────────┐     │ debit             │      │
+                            │ level               │|     │ credit            │      │
+                            │ isActive            │|     └───────────────────┘      │
+                            └───────────────────┬─┘|                                │
+                                                |  |                                │
+                                                └──┘                                │
+                                                                                   │
                             ┌────────────────────┐     ┌────────────────────┐       │
                             │       Ledger       │     │      Journal       │       │
                             ├────────────────────┤     ├────────────────────┤       │
