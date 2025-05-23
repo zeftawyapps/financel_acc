@@ -7,11 +7,13 @@ A comprehensive double-entry bookkeeping application built with Flutter for mana
 ### Windows Installation:
 
 #### Option 1: Installer
+
 1. Download the latest release from the GitHub Releases page
 2. Run the `install_windows.bat` file with administrator privileges
 3. A desktop shortcut will be created automatically
 
 #### Option 2: Manual Installation
+
 1. Download the latest release from the GitHub Releases page
 2. Extract the ZIP file to your preferred location
 3. Run `financel_acc.exe` to start the application
@@ -49,12 +51,14 @@ flutter build windows --release
 ## How to Use
 
 ### Setting Up Accounts:
+
 1. Navigate to the "Chart of Accounts" screen from the main menu
 2. Click "Add Account" to create new accounts
 3. Specify account details: number, name, type, and parent account (if applicable)
 4. Organize accounts in a hierarchical structure for better financial categorization
 
 ### Recording Transactions:
+
 1. Go to "Journal Entries" from the main menu
 2. Click "New Journal Entry"
 3. Enter the transaction date, reference number, and description
@@ -62,11 +66,13 @@ flutter build windows --release
 5. Save the journal entry to record the transaction
 
 ### Viewing the General Ledger:
+
 1. Access "General Ledger" from the main menu
 2. Select an account from the dropdown
 3. View all transactions affecting the selected account with running balances
 
 ### Generating Financial Statements:
+
 1. Navigate to "Financial Statements" from the main menu
 2. Use the date picker to select the reporting date
 3. Switch between Balance Sheet and Income Statement views
