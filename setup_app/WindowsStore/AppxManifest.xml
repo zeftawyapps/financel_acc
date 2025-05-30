@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  IgnorableNamespaces="uap mp rescap">
+
+  <Identity
+    Name="zeftawyapps.FinancialAccountingSystem"
+    Publisher="CN=00000000-0000-0000-0000-000000000000"
+    Version="1.0.0.0" />
+
+  <Properties>
+    <DisplayName>Financial Accounting System</DisplayName>
+    <PublisherDisplayName>zeftawyapps</PublisherDisplayName>
+    <Logo>images\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.0" MaxVersionTested="10.0.14393.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="$targetentrypoint$">
+      <uap:VisualElements
+        DisplayName="Financial Accounting System"
+        Description="A comprehensive financial accounting application for managing accounts, journals, and financial statements"
+        BackgroundColor="transparent"
+        Square150x150Logo="images\MediumTile.png"
+        Square44x44Logo="images\AppIcon.png">
+        <uap:DefaultTile
+          Wide310x150Logo="images\WideTile.png"
+          Square71x71Logo="images\SmallTile.png"
+          Square310x310Logo="images\LargeTile.png"/>
+        <uap:SplashScreen Image="images\SplashScreen.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="financial_acc_data">
+            <uap:DisplayName>Financial Accounting Data</uap:DisplayName>
+            <uap:Logo>images\FileIcon.png</uap:Logo>
+            <uap:InfoTip>Financial Accounting System Data File</uap:InfoTip>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.faccts</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <rescap:Capability Name="runFullTrust" />
+  </Capabilities>
+</Package>
